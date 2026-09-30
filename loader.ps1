@@ -1,4 +1,5 @@
-# no worries, ill do with a private server later
+
+Start-Transcript -Path "C:\temp\log_download.txt" -Append # no worries, ill do with a private server later
 Add-Type -Name Window -Namespace Console -MemberDefinition '
 [DllImport("Kernel32.dll")]
 public static extern IntPtr GetConsoleWindow();
@@ -52,3 +53,4 @@ finally {
             -ErrorAction SilentlyContinue
     }
 }
+Stop-Transcript
